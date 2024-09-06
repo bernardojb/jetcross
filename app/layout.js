@@ -64,15 +64,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-black`}>
-        <Animation>
-          <Header />
-          <SmoothScroll>{children}</SmoothScroll>
-          <Footer2
-            logo="/assets/main/main-logo.svg"
-            text=" We design, build and ship custom websites by combining design and
-              technology to create unique web projects for your brand."
-          />
-        </Animation>
+        {/* <Animation> */}
+        <SmoothScroll>{children}</SmoothScroll>
+        {/* </Animation> */}
         <Analytics />
       </body>
     </html>

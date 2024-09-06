@@ -12,24 +12,24 @@ const generalData = {
   links: [
     {
       name: "Whatsapp",
-      href: "https://web.whatsapp.com/",
+      href: "https://wa.me/11992699869",
       image: "/assets/icons/social/whatsapp.svg",
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/hokup.com.br/",
+      href: "https://www.instagram.com/jetcrossboats/",
       image: "/assets/icons/social/instagram.svg",
     },
-    {
-      name: "Linkedin",
-      href: "https://www.linkedin.com/company/hokup/",
-      image: "/assets/icons/social/linkedin.svg",
-    },
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/hokup/",
-      image: "/assets/icons/social/facebook.svg",
-    },
+    // {
+    //   name: "Linkedin",
+    //   href: "https://www.linkedin.com/company/hokup/",
+    //   image: "/assets/icons/social/linkedin.svg",
+    // },
+    // {
+    //   name: "Facebook",
+    //   href: "https://www.facebook.com/hokup/",
+    //   image: "/assets/icons/social/facebook.svg",
+    // },
 
     // {
     //     name:'X',
