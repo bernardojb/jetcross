@@ -45,12 +45,12 @@ export const metadata = {
     siteName: metaData.subtitle,
     images: [
       {
-        url: "https://i.imgur.com/y46gswC.png",
+        url: "https://i.imgur.com/Wz7gzXA.jpeg",
         width: 1200,
         height: 600,
       },
       {
-        url: "https://i.imgur.com/y46gswC.png",
+        url: "https://i.imgur.com/Wz7gzXA.jpeg",
         width: 1800,
         height: 1600,
       },
