@@ -7,7 +7,7 @@ import { generalData } from "@/data/general-data";
 function Home() {
   return (
     <div>
-      <section className="flex h-screen flex-col items-center justify-center bg-[#11190C] text-center">
+      <section className="flex h-screen flex-col items-center justify-center bg-[#11190C] px-5 text-center">
         <Image
           src="/assets/main/LOGO_HORIZONTAL.svg"
           height={88}
