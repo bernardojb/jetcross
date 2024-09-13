@@ -15,9 +15,9 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: "#fd4a65",
-          default: "#FF2847",
-          dark: "#aa1d32",
+          light: "#F6FF94",
+          default: "#FAFF00",
+          // dark: "#aa1d32",
         },
         secondary: {
           light: "#22D3EE",
@@ -37,8 +37,8 @@ module.exports = {
         danger: "#F55353",
       },
       fontFamily: {
-        primary: ["Inter", "sans-serif"],
-        secondary: ["Inter", "sans-serif"],
+        primary: [["var(--font-fugaz)"]],
+        secondary: ["var(--font-inter)"],
       },
       backgroundImage: {
         hero: "url('/assets/images/hero-bg.jpg')",

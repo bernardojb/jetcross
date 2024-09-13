@@ -8,7 +8,7 @@ const accordionSimpleData = [
   {
     id: 0,
     steps: "001",
-    title: "First big f*cking title",
+    title: "O que é um mini jetboat?",
     text: "Criação do escopo através de sessões de brainstorm e análise de mercado para explorar oportunidades de negócio e traduzi-las em soluções criativas para o projeto.",
     tags: ["BRIEFING", "PESQUISA", "DEFINIÇÃO", "ESTRATÉGIA"],
     background: "bg-gradient-img-accordion-01",
@@ -16,7 +16,7 @@ const accordionSimpleData = [
   {
     id: 1,
     steps: "002",
-    title: "Second big f*cking title",
+    title: "Qual o prazo de entrega?",
     text: "Refinamento do escopo através da estruturação de experiências, alinhamento da identidade visual, design de interface e prototipação digital.",
     tags: ["BRANDING", "IDENTIDADE", "COMUNICAÇÃO", "POSICIONAMENTO"],
     background: "bg-gradient-img-accordion-02",
@@ -24,7 +24,7 @@ const accordionSimpleData = [
   {
     id: 2,
     steps: "003",
-    title: "Third big f*cking title",
+    title: "posso customizar meu jetboat?",
     text: "Materialização e produção do escopo através do desenvolvimento front-end e back-end, estruturação do banco de dados e implementação das APIs.",
     tags: ["FRONT-END", "BACK-END", "INTEGRAÇÕES", "API’S"],
     background: "bg-gradient-img-accordion-03",
@@ -32,7 +32,7 @@ const accordionSimpleData = [
   {
     id: 3,
     steps: "004",
-    title: "Fourth big f*cking title",
+    title: "meu jetboat tem garantia?",
     text: "Quality assurance através de testes com usuários e definição estratégica para o lançamento e publicação do produto digital.",
     tags: ["QA", "SETUP", "DNS"],
     background: "bg-gradient-img-accordion-04",
@@ -54,13 +54,13 @@ const AccordionSimpleCard = ({ i, expanded, setExpanded, ...props }) => {
       >
         <div className="flex flex-col pb-5">
           <p
-            className={`font-primary font-semibold uppercase ${isOpen ? "text-primary-default" : "text-typo-secondary"}`}
+            className={`font-secondary uppercase ${isOpen ? "text-typo-primary" : "text-typo-secondary"}`}
           >
             {props.steps}
           </p>
           <h1
-            className={` text-4xl font-bold sm:text-6xl ${
-              isOpen ? "text-typo-primary" : "text-typo-secondary"
+            className={`font-primary text-4xl font-bold uppercase sm:text-5xl ${
+              isOpen ? "text-primary-default" : "text-typo-secondary"
             } transition duration-200 ease-out hover:text-typo-primary hover:transition hover:duration-200 hover:ease-out`}
           >
             {props.title}

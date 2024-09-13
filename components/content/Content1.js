@@ -1,24 +1,25 @@
 import Image from "next/image";
 // import { CloudIcon } from "/assets/icons/general/cloud.svg";
+import Button1 from "../buttons/Button1";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Água doce e salgada.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: "/assets/icons/general/cloud.svg",
+      "Desenvolvidos para todos os tipos de águas, são capazes de superar os limites da navegação comum, permitindo o uso em rios, mares, lagos e represas.",
+    icon: "/assets/icons/general/water.svg",
   },
   {
-    name: "SSL certificates.",
+    name: "Casco reforçado.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: "/assets/icons/general/cloud.svg",
+      " Feito em fibra, nossos jetboats são capazes de navegar em águas rasas, ultrapassando pequenos obstáculos como troncos, pedras e pequenas ilhas. Obtenha ainda mais reforço com nosso opcional de placas PEAD.",
+    icon: "/assets/icons/general/shield.svg",
   },
   {
-    name: "Database backups.",
+    name: "Compacto.",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: "/assets/icons/general/cloud.svg",
+      "Leve e compacto, possui uma ótima relação de peso/potência. Nossos mini jetboats podem ser equipados com motores de até 325 HP.",
+    icon: "/assets/icons/general/ruler.svg",
   },
 ];
 
@@ -26,13 +27,13 @@ export default function Content1({ background, image, subtitle, title, text }) {
   return (
     <div className={`${background} overflow-hidden py-24 sm:py-32`}>
       <div className="mx-auto max-w-7xl px-4">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto mb-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
-              <h2 className="font-primary font-semibold leading-7 text-primary-default">
+              <h2 className="font-secondary font-semibold leading-7 text-primary-light">
                 {subtitle}
               </h2>
-              <p className="mt-2 font-primary text-4xl font-bold tracking-tight text-typo-primary sm:text-6xl">
+              <p className="tracking-[-0.1875rem !important] mt-2 font-primary text-4xl font-bold uppercase leading-[128%] text-typo-primary sm:text-6xl">
                 {title}
               </p>
               <p className="mt-6 font-secondary text-lg leading-8 text-typo-secondary">
@@ -44,7 +45,7 @@ export default function Content1({ background, image, subtitle, title, text }) {
                     key={feature.name}
                     className="relative pl-9 font-secondary"
                   >
-                    <dt className="inline font-secondary font-semibold text-primary-default">
+                    <dt className="inline font-secondary font-semibold text-primary-light">
                       <Image
                         width={20}
                         height={20}
@@ -67,6 +68,13 @@ export default function Content1({ background, image, subtitle, title, text }) {
             width={2432}
             height={1442}
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+          />
+        </div>
+        <div className="w-fit">
+          <Button1
+            style="mr-0 sm:mr-6 mb-5 sm:mb-0 text-black"
+            text="Produtos"
+            link="/"
           />
         </div>
       </div>

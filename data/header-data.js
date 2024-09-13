@@ -2,33 +2,33 @@ const headerData = [
   {
     id: 1,
     href: "/",
-    title: "home",
+    title: "mini jetboats",
   },
   {
     id: 2,
     href: "/",
-    title: "about",
+    title: "produtos",
   },
   {
     id: 3,
     href: "/",
-    title: "projects",
+    title: "sobre",
   },
   {
     id: 4,
     href: "/",
-    title: "contact",
+    title: "contato",
   },
-  {
-    id: 5,
-    href: "/",
-    title: "privacy",
-  },
-  {
-    id: 6,
-    href: "/",
-    title: "login",
-  },
+  // {
+  //   id: 5,
+  //   href: "/",
+  //   title: "privacy",
+  // },
+  // {
+  //   id: 6,
+  //   href: "/",
+  //   title: "login",
+  // },
 ];
 
 export { headerData };

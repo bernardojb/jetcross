@@ -75,19 +75,19 @@ export default function Header() {
   return (
     <>
       <motion.div
-        className="fixed z-[999] flex min-h-[6rem] w-full flex-col border-b-[1px] border-[#fff2] bg-headerGradient px-4 backdrop-blur-lg"
+        className="fixed z-[999] flex min-h-[86px] w-full flex-col border-b-[1px] border-[#fff2] bg-headerGradient px-4 backdrop-blur-lg"
         animate={toggle ? "open" : "closed"}
         variants={openNav}
         initial={false}
       >
-        <div className="mx-auto flex h-[80px] min-h-[6rem] w-full flex-row items-center">
+        <div className="mx-auto flex h-[86px] min-h-[86px] w-full flex-row items-center">
           {/* Logo */}
           <a href="/" className="pr-5">
             <Image
-              src="/assets/main/main-logo.svg"
+              src="/assets/icons/general/jetcross-full-logo.svg"
               alt="Hokup Logo"
-              width={144}
-              height={44}
+              width={270}
+              height={46}
             />
           </a>
 
@@ -99,7 +99,7 @@ export default function Header() {
               <Link
                 key={i.id}
                 href={i.href}
-                className={`ml-10 font-primary text-lg font-bold uppercase hover:text-primary-dark ${i.href === pathname ? "text-primary-default" : "text-typo-extra"}`}
+                className={`ml-10 font-secondary text-lg font-bold uppercase italic hover:text-primary-dark ${i.href === pathname ? "text-primary-default" : "text-typo-primary"}`}
               >
                 {i.title}
               </Link>

@@ -1,6 +1,6 @@
 import "./globals.css";
 import * as React from "react";
-import { Inter } from "next/font/google";
+import { Inter, Fugaz_One } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import SmoothScroll from "@/components/smooth-scroll/SmoothScroll";
 
@@ -14,10 +14,19 @@ import { AnimatePresence } from "framer-motion";
 import { Suspense } from "react";
 
 //Setup & Meta
-// const inter = Inter({
-//   subsets: ["latin"],
-//   display: "swap",
-// });
+export const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+  // style: "letter-spacing: -5%;",
+});
+
+export const fugaz = Fugaz_One({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-fugaz",
+  weight: "400",
+});
 
 export const metadata = {
   title: metaData.title,
@@ -63,8 +72,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-black`}>
+      <body className={`bg-black ${inter.variable} ${fugaz.variable}`}>
         {/* <Animation> */}
+        <Header />
         <SmoothScroll>{children}</SmoothScroll>
         {/* </Animation> */}
         <Analytics />

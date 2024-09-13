@@ -2,33 +2,33 @@ const routerData = [
   {
     id: 1,
     href: "/",
-    title: "home",
+    title: "mini jetboats",
   },
   {
     id: 2,
-    href: "/about",
-    title: "about",
+    href: "/produtos",
+    title: "produtos",
   },
   {
     id: 3,
-    href: "/projects",
-    title: "projects",
+    href: "/sobre",
+    title: "sobre",
   },
   {
     id: 4,
     href: "/contato",
     title: "contato",
   },
-  {
-    id: 5,
-    href: "/privacy",
-    title: "privacy",
-  },
-  {
-    id: 6,
-    href: "/login",
-    title: "login",
-  },
+  // {
+  //   id: 5,
+  //   href: "/privacy",
+  //   title: "privacy",
+  // },
+  // {
+  //   id: 6,
+  //   href: "/login",
+  //   title: "login",
+  // },
 ];
 
 export { routerData };
