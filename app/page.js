@@ -43,7 +43,7 @@ const Home = () => {
         button={
           <>
             <Button1
-              style="mr-0 sm:mr-6 mb-5 sm:mb-0 text-black"
+              style="mr-0 sm:mr-6 mb-5 sm:mb-0 text-black bg-primary-default"
               text="Produtos"
               link="/"
             />
