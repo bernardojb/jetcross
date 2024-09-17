@@ -41,14 +41,14 @@ function Services1({ subtitle, title, text, background, pillColor }) {
     // },
   ];
   return (
-    <div class={`${background} py-24 sm:py-32`}>
+    <div class={`${background} py-24 sm:py-32`} id="sobre">
       <div class="mx-auto max-w-7xl px-4">
         <div class="mx-auto max-w-[936px] lg:text-center">
           <h2 class="font-secondary text-primary-light">{subtitle}</h2>
           <h1 class="mt-2 font-primary text-4xl font-bold uppercase tracking-tight text-typo-primary sm:text-6xl title">
             {title}
           </h1>
-          <p class="mt-6 font-secondary text-lg leading-8 text-typo-secondary max-w-[618px] text-center mx-auto">
+          <p class="mt-6 font-secondary text-lg leading-8 text-typo-secondary max-w-[618px] text-center mx-auto paragraph">
             {text}
           </p>
         </div>
@@ -61,25 +61,11 @@ function Services1({ subtitle, title, text, background, pillColor }) {
                     class={`absolute left-0 top-0 flex h-10 w-[50px] items-center justify-center ${pillColor}`}
                     style={{clipPath:"polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)"}}
                   >
-                    {/* <svg
-                      class="h-6 w-6 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
-                      />
-                    </svg> */}
                     <Image src={i.icon} width={24} height={24} />
                   </div>
                   {i.title}
                 </dt>
-                <dd class="mt-2 font-secondary text-base leading-7 text-typo-secondary">
+                <dd class="mt-2 font-secondary text-base leading-7 text-typo-secondary paragraph">
                   {i.text}
                 </dd>
               </div>

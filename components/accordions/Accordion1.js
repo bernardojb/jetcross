@@ -33,10 +33,10 @@ const accordionSimpleData = [
     title: "Qual o prazo de entrega?",
     text: (
       <>
-        Mini jetboats são barcos compactos alimentados a base de hidrojato,
-        combinando desempenho, robustez e versatilidade. Navegáveis em água doce
-        e salgada, são perfeitos para todos os usos, seja para uma pilotagem
-        casual, pesca ou até mesmo para prática de esportes radicais. <br />
+        Como nossos projetos são customizados sob medida para cada cliente, o
+        prazo de entrega pode variar de acordo com o nível de personalização
+        escolhida.
+        <br />
         <br />{" "}
         <Link href="#contato" className="text-primary-default underline">
           {" "}
@@ -59,9 +59,13 @@ const accordionSimpleData = [
         para você adequar seu mini jetboat para seu uso.
         <br />
         <br />
-        <span className="text-primary-default underline">
+        <a
+          href="/assets/main/FichaTécnica-AquaSeeker.pdf"
+          target="_blank"
+          className="text-primary-default underline"
+        >
           Faça o download da ficha técnica
-        </span>{" "}
+        </a>{" "}
         para obter todas as opções de customização para o Aqua Seeker.
       </>
     ),
@@ -112,7 +116,7 @@ const AccordionSimpleCard = ({ i, expanded, setExpanded, ...props }) => {
             {props.steps}
           </p>
           <h1
-            className={`font-primary text-4xl font-bold uppercase sm:text-5xl ${
+            className={`title font-primary text-4xl font-bold uppercase sm:text-5xl ${
               isOpen ? "text-primary-default" : "text-typo-secondary"
             } transition duration-200 ease-out hover:text-typo-primary hover:transition hover:duration-200 hover:ease-out`}
           >
@@ -139,7 +143,7 @@ const AccordionSimpleCard = ({ i, expanded, setExpanded, ...props }) => {
               transition={{ duration: 0.4 }}
               className="pb-10"
             >
-              <p className="pb-6 text-[22px] leading-[28px] tracking-[-1.1px] text-typo-secondary">
+              <p className="paragraph pb-6 text-[22px] text-typo-secondary">
                 {props.text}
               </p>
               <div className="h-[1px] w-full bg-[#C0C0C033]"></div>

@@ -1,22 +1,22 @@
 const routerData = [
   {
     id: 1,
-    href: "/#mini-jetboats",
+    href: "#mini-jetboats",
     title: "mini jetboats",
   },
   {
     id: 2,
-    href: "/produtos",
+    href: "#produtos",
     title: "produtos",
   },
   {
     id: 3,
-    href: "/sobre",
+    href: "#sobre",
     title: "sobre",
   },
   {
     id: 4,
-    href: "/contato",
+    href: "#contato",
     title: "contato",
   },
   // {

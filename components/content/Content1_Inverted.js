@@ -50,7 +50,7 @@ export default function Content1_Inverted({
               <p className="tracking-[-0.1875rem !important] title mt-2 font-primary text-4xl font-bold uppercase leading-[128%] text-typo-primary sm:text-6xl">
                 adrenalina DO ASFALTO PARA A ÁGUA
               </p>
-              <p className="mt-6 font-secondary text-lg leading-8 text-typo-secondary mb-6">
+              <p className="mt-6 font-secondary text-lg leading-8 text-typo-secondary mb-6 paragraph">
                 Fundada por Guilherme Samaia, ex-piloto de Fórmula 2, a Jetcross
                 nasce com o objetivo de trazer para o mundo da navegação toda a
                 experiência e emoção que o piloto viveu nas pistas. Com o

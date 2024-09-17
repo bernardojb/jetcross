@@ -2,10 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-#hero{
+/* #hero {
     letter-spacing: 0.05em !important;
+} */
+
+.title {
+    line-height: 128% !important;
 }
 
-.title{
-    line-height: 128% !important;
+.paragraph {
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.05em !important;
 }

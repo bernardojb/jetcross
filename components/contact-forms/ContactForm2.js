@@ -20,10 +20,10 @@ function ContactForm2({
             <p className="mb-3 font-secondary text-base uppercase text-primary-light">
               {subtitle}
             </p>
-            <h1 className="mb-6 font-primary text-3xl font-bold uppercase text-typo-primary sm:text-5xl">
+            <h1 className="mb-6 font-primary text-3xl font-bold uppercase text-typo-primary sm:text-5xl title">
               {title}
             </h1>
-            <p className="mb-12 max-w-lg font-secondary text-lg text-typo-secondary">
+            <p className="mb-12 max-w-lg font-secondary text-lg text-typo-secondary paragraph">
               {text}
             </p>
             <div className="flex flex-row">

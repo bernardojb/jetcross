@@ -33,10 +33,10 @@ export default function Content1({ background, image, subtitle, title, text }) {
               <h2 className="font-secondary font-semibold leading-7 text-primary-light">
                 {subtitle}
               </h2>
-              <p className="tracking-[-0.1875rem !important] mt-2 font-primary text-4xl font-bold uppercase leading-[128%] text-typo-primary sm:text-6xl">
+              <p className="mt-2 font-primary text-4xl font-bold uppercase title text-typo-primary sm:text-6xl">
                 {title}
               </p>
-              <p className="mt-6 font-secondary text-lg leading-8 text-typo-secondary">
+              <p className="mt-6 font-secondary text-lg leading-8 text-typo-secondary paragraph">
                 {text}
               </p>
               <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
@@ -54,7 +54,7 @@ export default function Content1({ background, image, subtitle, title, text }) {
                       />
                       {feature.name}
                     </dt>{" "}
-                    <dd className="inline font-secondary text-typo-secondary">
+                    <dd className="inline font-secondary text-typo-secondary paragraph">
                       {feature.description}
                     </dd>
                   </div>
@@ -74,7 +74,7 @@ export default function Content1({ background, image, subtitle, title, text }) {
           <Button1
             style="mr-0 sm:mr-6 mb-5 sm:mb-0 bg-primary-default text-black"
             text="Produtos"
-            link="/"
+            link="#produtos"
           />
         </div>
       </div>

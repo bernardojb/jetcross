@@ -1,7 +1,7 @@
 "use client";
 //Setup
 import * as React from "react";
-
+import Link from "next/link";
 //Components
 import LogoClouds1 from "@/components/logo-clouds/LogoClouds1";
 import LogoClouds2 from "@/components/logo-clouds/LogoClouds2";
@@ -41,7 +41,6 @@ const Home = () => {
     <>
       <Hero2
         background="bg-hero"
-        pill={<></>}
         title="REDEFININDO A EXPERIÊNCIA DE NAVEGAÇÃO COMUM"
         text="A Jetcross chegou para quebrar as barreiras da navegação e proporcionar aventuras aquáticas através da fabricação e comercialização de mini jetboats customizáveis."
         button={
@@ -49,19 +48,31 @@ const Home = () => {
             <Button1
               style="mr-0 sm:mr-6 mb-5 sm:mb-0 text-black bg-primary-default"
               text="Produtos"
-              link="/"
+              link="#produtos"
             />
             <Button1
               style="bg-[#FFFFFF1A] text-typo-primary"
               text="Contato"
-              link="/"
+              link="#contato"
             />
           </>
         }
       />
 
-      {/* <Marquee1 direction="right" style="rotate-12" /> */}
-      {/* <Marquee1 direction="left" style="" /> */}
+      <div className="relative h-[120px] w-full overflow-x-hidden bg-red-600">
+        <div
+          className="absolute top-[25%] rotate-[-1.8deg] overflow-hidden"
+          style={{ zIndex: "999 !important" }}
+        >
+          <Marquee1 direction="left" />
+        </div>
+        <div
+          className="absolute top-[25%] rotate-[1.3deg] overflow-hidden"
+          style={{ zIndex: "999 !important" }}
+        >
+          <Marquee1 direction="right" />
+        </div>
+      </div>
 
       <Content1
         subtitle={"MINI JETBOAT?"}
@@ -69,12 +80,15 @@ const Home = () => {
         text={
           "Mini jetboats são barcos compactos que combinam desempenho, robustez e versatilidade. São navegáveis em qualquer tipo de água e perfeitos para todos os usos, seja para uma volta casual ou até para a prática de esportes radicais."
         }
-        background="bg-black"
+        background="bg-content1Gradient"
         image="/assets/images/mini-jetboats.png"
       />
 
-      <section className="bg-carrouselGradient flex flex-col h-screen items-center justify-center pb-10">
-        <div className="flex flex-col justify-center items-center">
+      <section
+        className="bg-carrouselGradient flex flex-col items-center justify-center pb-20 pt-[160px]"
+        id="produtos"
+      >
+        <div className="flex flex-col items-center justify-center">
           <Image
             src="/assets/icons/general/jetcross-type-logo.svg"
             height={20}
@@ -87,38 +101,64 @@ const Home = () => {
             width={630}
             className="mb-3"
           />
-          <p className="text-typo-secondary font-secondary text-lg mb-14">O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.</p>
+          <p className="mb-14 font-secondary text-lg text-typo-secondary">
+            O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.
+          </p>
         </div>
         <Carousel1 />
+        <div className="flex flex-row items-center pt-24">
+          <div
+            class={`mr-4 flex h-10 w-[50px] items-center justify-center bg-primary-default`}
+            style={{ clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)" }}
+          >
+            <Image
+              src="/assets/icons/general/download.svg"
+              width={24}
+              height={24}
+            />
+          </div>
+          <p className="font-secondary text-lg text-typo-secondary">
+            <a
+              target="_blank"
+              href="/assets/main/FichaTécnica-AquaSeeker.pdf"
+              className="text-primary-default underline"
+            >
+              Faça o download da ficha técnica
+            </a>{" "}
+            para visualizar as informações completas do Aqua Seeker
+          </p>
+        </div>
       </section>
 
-      <section className="flex justify-center px-4 py-7">
-        <div
-          className="bg-accentGradient mx-6 flex w-full max-w-[1342px] flex-row items-center justify-around px-20"
-          style={{
-            clipPath:
-              "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
-          }}
-        >
-          <Image
-            src="assets/icons/general/cta-arrow.svg"
-            width={74}
-            height={26}
-          />
-          <h1 className=" px-5 py-8 text-center font-primary text-5xl text-black">
-            PEÇA SEU JETCROSS AGORA
-          </h1>
-          <Image
-            src="assets/icons/general/cta-arrow.svg"
-            width={74}
-            height={26}
-            className=" rotate-180"
-          />
-        </div>
+      <section className="flex justify-center bg-[#11190C] px-4 py-7">
+        <Link href="#contato">
+          <div
+            className="bg-accentGradient mx-6 flex w-full max-w-[1342px] flex-row items-center justify-around px-20"
+            style={{
+              clipPath:
+                "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
+            }}
+          >
+            <Image
+              src="assets/icons/general/cta-arrow.svg"
+              width={74}
+              height={26}
+            />
+            <h1 className=" title px-5 py-8 text-center font-primary text-5xl text-black">
+              PEÇA SEU JETCROSS AGORA
+            </h1>
+            <Image
+              src="assets/icons/general/cta-arrow.svg"
+              width={74}
+              height={26}
+              className=" rotate-180"
+            />
+          </div>
+        </Link>
       </section>
 
       <Services1
-        background="bg-initialGradient"
+        background="bg-servicesGradient"
         subtitle="NOSSA PROPOSTA"
         title="quebrar as barreiras da navegação comum"
         text="A Jetcross chegou para quebrar as barreiras da navegação e proporcionar aventuras aquáticas através da fabricação e comercialização de mini jetboats customizáveis."
@@ -136,46 +176,48 @@ const Home = () => {
       />
 
       <AccordionSection2
-        background="bg-finalGradient"
+        background="bg-black"
         button={
           <Button1
             style="mb-5 sm:mb-0 text-black bg-primary-default w-fit"
             text="Produtos"
-            link="/"
+            link="#produtos"
           />
         }
       />
 
-      <section className="relative flex h-[324px] w-full items-center justify-center overflow-hidden bg-primary-default">
-        <div
-          className="bg-complementaryGradient z-10 mx-6 flex w-full max-w-[1342px] flex-row items-center justify-around px-20"
-          style={{
-            clipPath:
-              "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
-          }}
-        >
+      <Link href="#contato">
+        <section className="relative flex h-[324px] w-full items-center justify-center overflow-hidden bg-primary-default">
+          <div
+            className="bg-complementaryGradient z-10 mx-6 flex w-full max-w-[1342px] flex-row items-center justify-around px-20"
+            style={{
+              clipPath:
+                "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
+            }}
+          >
+            <Image
+              src="assets/icons/general/cta-arrow.svg"
+              width={74}
+              height={26}
+            />
+            <h1 className=" title px-5 py-8 text-center font-primary text-5xl text-black">
+              PEÇA SEU JETCROSS AGORA
+            </h1>
+            <Image
+              src="assets/icons/general/cta-arrow.svg"
+              width={74}
+              height={26}
+              className="rotate-180"
+            />
+          </div>
           <Image
-            src="assets/icons/general/cta-arrow.svg"
-            width={74}
-            height={26}
+            src="assets/icons/general/J.svg"
+            width={1050}
+            height={730}
+            className="absolute left-[-375px] z-0"
           />
-          <h1 className=" px-5 py-8 text-center font-primary text-5xl text-black">
-            PEÇA SEU JETCROSS AGORA
-          </h1>
-          <Image
-            src="assets/icons/general/cta-arrow.svg"
-            width={74}
-            height={26}
-            className="rotate-180"
-          />
-        </div>
-        <Image
-          src="assets/icons/general/J.svg"
-          width={1050}
-          height={730}
-          className="absolute left-[-375px] z-0"
-        />
-      </section>
+        </section>
+      </Link>
 
       <ContactForm2
         background="bg-contactGradient"
@@ -188,7 +230,7 @@ const Home = () => {
         social="@jetcrossboats"
       />
 
-      <section className="">
+      <section className="bg-[#11190C]">
         <div className="grid grid-cols-12">
           <div className="col-span-10 col-start-2 pb-9 pt-14">
             <Image

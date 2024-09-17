@@ -124,6 +124,7 @@ const slides = [
 
 export default function Carousel1() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [canNavigate, setCanNavigate] = useState(true)
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
