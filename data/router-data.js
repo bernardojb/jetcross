@@ -1,7 +1,7 @@
 const routerData = [
   {
     id: 1,
-    href: "/",
+    href: "/#mini-jetboats",
     title: "mini jetboats",
   },
   {

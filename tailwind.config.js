@@ -43,6 +43,9 @@ module.exports = {
       backgroundImage: {
         hero: "url('/assets/images/hero-bg.jpg')",
         initialGradient: "linear-gradient(0deg, #0A2723 0%, #000 100%)",
+        accentGradient: "linear-gradient(90deg, #FAFF00 0.75%, #F6FF94 99.33%)",
+        carrouselGradient: "linear-gradient(180deg, #000 0%, #213118 50%, #11190C 100%)",
+        complementaryGradient: "linear-gradient(90deg, #3ED1FF 0.75%, #9BE7FF 99.33%)",
         middleGradient: "linear-gradient(180deg, #0A2723 0%, #0A2723 100%)",
         finalGradient: "linear-gradient(180deg, #0A2723 0%, #000 100%)",
         contactGradient: "linear-gradient(180deg, #000 0%, #0A2723 100%)",

@@ -25,7 +25,7 @@ const features = [
 
 export default function Content1({ background, image, subtitle, title, text }) {
   return (
-    <div className={`${background} overflow-hidden py-24 sm:py-32`}>
+    <div className={`${background} overflow-hidden py-24 sm:py-32`} id="mini-jetboats">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-6 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="lg:pr-8 lg:pt-4">
@@ -72,7 +72,7 @@ export default function Content1({ background, image, subtitle, title, text }) {
         </div>
         <div className="w-fit">
           <Button1
-            style="mr-0 sm:mr-6 mb-5 sm:mb-0 text-black"
+            style="mr-0 sm:mr-6 mb-5 sm:mb-0 bg-primary-default text-black"
             text="Produtos"
             link="/"
           />

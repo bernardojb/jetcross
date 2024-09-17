@@ -13,7 +13,7 @@ function ContactForm2({
   background,
 }) {
   return (
-    <section className={`px-4 py-32 ${background}`}>
+    <section className={`px-4 py-32 ${background}`} id="contato">
       <div className="grid grid-cols-12 gap-4 gap-y-20 lg:gap-y-0">
         <div className="col-span-12 lg:col-span-3 lg:col-start-2">
           <div className="flex flex-col">
@@ -49,7 +49,7 @@ function ContactForm2({
               </p>
               <div className="w-fit">
                 <a href={`mailto:${email}`}>
-                  <h1 className="mb-6 font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
+                  <h1 className="font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
                     {email}
                   </h1>
                 </a>
@@ -61,7 +61,7 @@ function ContactForm2({
               </p>
               <div className="w-fit">
                 <a href={`tel:${phone}`}>
-                  <h1 className="mb-6 font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
+                  <h1 className="font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
                     {phone}
                   </h1>
                 </a>
@@ -73,7 +73,7 @@ function ContactForm2({
               </p>
               <div className="w-fit">
                 <a href={socialLink} target="_blank">
-                  <h1 className="mb-6 font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
+                  <h1 className="font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
                     {social}
                   </h1>
                 </a>

@@ -13,6 +13,10 @@ import Animation from "@/components/animations/Animation";
 import { AnimatePresence } from "framer-motion";
 import { Suspense } from "react";
 
+export const viewport = {
+  themeColor: 'black',
+}
+
 //Setup & Meta
 export const inter = Inter({
   subsets: ["latin"],
@@ -44,7 +48,7 @@ export const metadata = {
   ],
   creator: "hokup",
   publisher: "hokup",
-  themeColor: metaData.themeColor,
+  // themeColor: "#FAFF00",
 
   //Open Graph
   openGraph: {

@@ -5,3 +5,7 @@
 #hero{
     letter-spacing: 0.05em !important;
 }
+
+.title{
+    line-height: 128% !important;
+}
