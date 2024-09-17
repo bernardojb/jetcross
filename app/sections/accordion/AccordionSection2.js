@@ -8,7 +8,7 @@ function AccordionSection2({ background, button }) {
         <div className="grid grid-cols-12 gap-4">
           <div className=" col-span-12 mb-20 lg:col-span-3 lg:col-start-2 lg:mb-0">
             <div className="flex flex-col">
-              <p className="mb-3 font-secondary text-primary-light">FAQ</p>
+              <p className="mb-3 font-secondary text-primary-light italic">FAQ</p>
               <h1 className="max-w-md mb-6 font-primary text-3xl font-bold text-typo-primary sm:text-5xl title">
                 PERGUNTAS FREQUENTES
               </h1>

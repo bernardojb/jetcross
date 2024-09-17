@@ -44,7 +44,7 @@ export default function Content1_Inverted({
           </div>
 
           <div className="col-span-12 lg:col-span-4 lg:col-start-8">
-              <h2 className="font-secondary font-semibold leading-7 text-primary-light">
+              <h2 className="font-secondary font-semibold leading-7 text-primary-light italic">
                 NOSSA HISTÓRIA
               </h2>
               <p className="tracking-[-0.1875rem !important] title mt-2 font-primary text-4xl font-bold uppercase leading-[128%] text-typo-primary sm:text-6xl">

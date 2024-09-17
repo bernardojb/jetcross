@@ -20,10 +20,10 @@ function ContactForm2({
             <p className="mb-3 font-secondary text-base uppercase text-primary-light">
               {subtitle}
             </p>
-            <h1 className="mb-6 font-primary text-3xl font-bold uppercase text-typo-primary sm:text-5xl title">
+            <h1 className="title mb-6 font-primary text-4xl font-bold uppercase text-typo-primary sm:text-5xl">
               {title}
             </h1>
-            <p className="mb-12 max-w-lg font-secondary text-lg text-typo-secondary paragraph">
+            <p className="paragraph mb-12 max-w-lg font-secondary text-lg text-typo-secondary">
               {text}
             </p>
             <div className="flex flex-row">
@@ -34,7 +34,7 @@ function ContactForm2({
                     alt="Social media icon"
                     width={24}
                     height={24}
-                    className="transition duration-200 ease-out hover:brightness-200"
+                    className="transition duration-200 ease-out hover:brightness-200 hover:transition hover:duration-200 hover:ease-out "
                   />
                 </a>
               ))}
@@ -44,36 +44,36 @@ function ContactForm2({
         <div className="col-span-12 lg:col-span-6 lg:col-start-6">
           <div className="flex flex-col">
             <div className=" mb-16 ">
-              <p className="mb-3 font-secondary text-base font-semibold uppercase text-typo-secondary">
+              <p className="mb-3 font-secondary text-base font-semibold uppercase italic text-typo-secondary">
                 Email
               </p>
               <div className="w-fit">
                 <a href={`mailto:${email}`}>
-                  <h1 className="font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
+                  <h1 className="font-primary text-[22px] font-bold uppercase text-typo-primary transition duration-300 ease-out hover:text-primary-default hover:transition hover:duration-300 hover:ease-out sm:text-3xl lg:text-4xl xl:text-5xl">
                     {email}
                   </h1>
                 </a>
               </div>
             </div>
             <div className=" mb-16 ">
-              <p className="mb-3 font-secondary text-base font-semibold uppercase text-typo-secondary">
+              <p className="mb-3 font-secondary text-base font-semibold uppercase italic text-typo-secondary">
                 Whatsapp
               </p>
               <div className="w-fit">
-                <a href={`tel:${phone}`}>
-                  <h1 className="font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
+                <a href={`https://wa.me/5511992699869`} target="_blank">
+                  <h1 className="font-primary text-[22px] font-bold uppercase text-typo-primary transition duration-300 ease-out hover:text-primary-default hover:transition hover:duration-300 hover:ease-out sm:text-3xl lg:text-4xl  xl:text-5xl">
                     {phone}
                   </h1>
                 </a>
               </div>
             </div>
             <div className="">
-              <p className="mb-3 font-secondary text-base font-semibold uppercase text-typo-secondary">
+              <p className="mb-3 font-secondary text-base font-semibold uppercase italic text-typo-secondary">
                 Social
               </p>
               <div className="w-fit">
                 <a href={socialLink} target="_blank">
-                  <h1 className="font-primary text-3xl font-bold uppercase text-typo-primary hover:text-typo-secondary sm:text-4xl">
+                  <h1 className="font-primary text-[22px] font-bold uppercase text-typo-primary transition duration-300 ease-out hover:text-primary-default hover:transition hover:duration-300 hover:ease-out sm:text-3xl lg:text-4xl  xl:text-5xl">
                     {social}
                   </h1>
                 </a>

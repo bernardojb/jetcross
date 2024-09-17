@@ -1,13 +1,17 @@
 import React from "react";
 import Image from "next/image";
+import Marquee1 from "../marquee/Marquee1";
 
 function Hero2({ title, text, background, button, marquee }) {
   return (
-    <div className="relative h-full overflow-hidden">
-      <section 
-        className={`h-[95svh] w-full text-white ${background} bg-cover bg-center bg-no-repeat px-4`}
+      <section
+        className={`min-h-[100svh] w-full text-white ${background} flex items-end justify-end bg-cover bg-center bg-no-repeat px-4`}
+        style={{ height: "100% !important" }}
       >
-        <div className="flex h-full w-full flex-col justify-end lg:grid lg:grid-cols-12 lg:gap-4">
+        <div
+          className="flex w-full flex-col justify-end lg:grid lg:grid-cols-12 lg:gap-4"
+          style={{ height: "100% !important" }}
+        >
           <div className="mb-6 lg:col-span-5 lg:col-start-2 lg:mb-24">
             <div className="flex h-full flex-col items-start justify-end">
               <Image
@@ -23,7 +27,7 @@ function Hero2({ title, text, background, button, marquee }) {
             </div>
           </div>
 
-          <div className="lg:col-span-4 lg:col-start-8 lg:mb-24">
+          <div className="mb-10 lg:col-span-4 lg:col-start-8 lg:mb-24">
             <div className="flex h-full flex-col items-start justify-end">
               <p
                 className="paragraph mb-11 text-start font-secondary text-2xl text-typo-primary"
@@ -36,8 +40,6 @@ function Hero2({ title, text, background, button, marquee }) {
           </div>
         </div>
       </section>
-      {marquee}
-    </div>
   );
 }
 

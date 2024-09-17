@@ -140,7 +140,7 @@ export default function Carousel1() {
 
   return (
     <div className="relative mx-auto w-full">
-      <div className="mb-6 overflow-hidden">
+      <div className="mb-6 overflow-hidden image-shaddow">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -156,6 +156,9 @@ export default function Carousel1() {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
+                priority
+                quality={100}
+                className=""
               />
             </div>
             <div className="flex flex-row justify-center items-center max-w-[1428px] mx-auto">

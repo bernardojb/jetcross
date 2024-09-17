@@ -109,16 +109,16 @@ const AccordionSimpleCard = ({ i, expanded, setExpanded, ...props }) => {
         }}
         className="w-full cursor-pointer"
       >
-        <div className="flex flex-col pb-6">
+        <div className="flex flex-col pb-6 group">
           <p
-            className={` mb-3 font-secondary uppercase ${isOpen ? "text-typo-primary" : "text-typo-secondary"}`}
+            className={` mb-3 font-secondary uppercase transition duration-300 ease-out group-hover:text-typo-primary group-hover:transition group-hover:duration-300 hover:ease-out ${isOpen ? "text-typo-primary" : "text-typo-secondary"} italic`}
           >
             {props.steps}
           </p>
           <h1
             className={`title font-primary text-4xl font-bold uppercase sm:text-5xl ${
               isOpen ? "text-primary-default" : "text-typo-secondary"
-            } transition duration-200 ease-out hover:text-typo-primary hover:transition hover:duration-200 hover:ease-out`}
+            } transition duration-300 ease-out group-hover:text-primary-default group-hover:transition group-hover:duration-300 group-hover:ease-out `}
           >
             {props.title}
           </h1>
@@ -143,7 +143,7 @@ const AccordionSimpleCard = ({ i, expanded, setExpanded, ...props }) => {
               transition={{ duration: 0.4 }}
               className="pb-10"
             >
-              <p className="paragraph pb-6 text-[22px] text-typo-secondary">
+              <p className="paragraph pb-6 text-lg text-typo-secondary font-secondary">
                 {props.text}
               </p>
               <div className="h-[1px] w-full bg-[#C0C0C033]"></div>

@@ -72,6 +72,10 @@ export default function Header() {
     },
   };
 
+  useEffect(() => {
+    console.log(pathname);
+  });
+
   return (
     <>
       <motion.div
@@ -82,12 +86,21 @@ export default function Header() {
       >
         <div className="mx-auto flex h-[86px] min-h-[86px] w-full flex-row items-center">
           {/* Logo */}
-          <a href="/" className="pr-5">
+          <a href="/" className="hidden lg:block pr-5">
             <Image
               src="/assets/icons/general/jetcross-full-logo.svg"
               alt="Hokup Logo"
               width={270}
               height={46}
+            />
+          </a>
+
+          <a href="/" className="pr-5 lg:hidden">
+            <Image
+              src="/assets/icons/general/jetcross-full-logo.svg"
+              alt="Hokup Logo"
+              width={175}
+              height={35}
             />
           </a>
 
@@ -99,7 +112,7 @@ export default function Header() {
               <Link
                 key={i.id}
                 href={i.href}
-                className={`ml-10 font-secondary text-lg font-bold uppercase italic hover:text-primary-dark ${i.href === pathname ? "text-primary-default" : "text-typo-primary"}`}
+                className={`hover:text-primary-dark ml-10 font-secondary text-lg font-bold uppercase italic ${i.href === pathname ? "text-primary-default" : "text-typo-primary"}`}
               >
                 {i.title}
               </Link>
@@ -107,7 +120,7 @@ export default function Header() {
           </div>
 
           {/* Hamburger */}
-          <motion.nav
+          {/* <motion.nav
             initial={false}
             animate={toggle ? "open" : "closed"}
             className="ml-auto block lg:hidden"
@@ -117,7 +130,13 @@ export default function Header() {
                 setToggle(!toggle);
               }}
             />
-          </motion.nav>
+          </motion.nav> */}
+          <Link
+            href="#contato"
+            className={`hover:text-primary-dark ml-auto block font-secondary text-lg font-bold uppercase italic text-typo-primary lg:hidden`}
+          >
+            CONTATO
+          </Link>
         </div>
 
         <div

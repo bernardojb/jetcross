@@ -12,7 +12,10 @@
 
 .paragraph {
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
     letter-spacing: -0.05em !important;
+}
+
+.image-shaddow{
+    filter: drop-shadow(20px 35px 250px rgba(255, 237, 140, 0.28)) !important;
 }

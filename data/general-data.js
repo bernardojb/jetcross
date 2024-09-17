@@ -12,7 +12,7 @@ const generalData = {
   links: [
     {
       name: "Whatsapp",
-      href: "https://wa.me/11992699869",
+      href: "https://wa.me/5511992699869",
       image: "/assets/icons/social/whatsapp.svg",
     },
     {

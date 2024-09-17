@@ -27,24 +27,12 @@ function Services1({ subtitle, title, text, background, pillColor }) {
       text: "Experimente a sensação única de liberdade ao pilotar um Jetcross. Muito mais que um simples barco, esteja preparado para redefinir sua experiência de navegação. ",
       icon: "assets/icons/general/boat.svg",
     },
-    // {
-    //   id: "5",
-    //   title: "Service 5",
-    //   text: "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    //   icon: "",
-    // },
-    // {
-    //   id: "6",
-    //   title: "Service 6",
-    //   text: "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
-    //   icon: "",
-    // },
   ];
   return (
     <div class={`${background} py-24 sm:py-32`} id="sobre">
       <div class="mx-auto max-w-7xl px-4">
-        <div class="mx-auto max-w-[936px] lg:text-center">
-          <h2 class="font-secondary text-primary-light">{subtitle}</h2>
+        <div class="mx-auto max-w-[936px] text-center">
+          <h2 class="font-secondary text-primary-light italic">{subtitle}</h2>
           <h1 class="mt-2 font-primary text-4xl font-bold uppercase tracking-tight text-typo-primary sm:text-6xl title">
             {title}
           </h1>
