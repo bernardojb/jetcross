@@ -49,7 +49,7 @@ function ContactForm2({
               </p>
               <div className="w-fit">
                 <a href={`mailto:${email}`}>
-                  <h1 className="font-primary text-[22px] font-bold uppercase text-typo-primary transition duration-300 ease-out hover:text-primary-default hover:transition hover:duration-300 hover:ease-out sm:text-3xl lg:text-4xl xl:text-5xl">
+                  <h1 className="break-all lg:break-keep font-primary text-[22px] font-bold uppercase text-typo-primary transition duration-300 ease-out hover:text-primary-default hover:transition hover:duration-300 hover:ease-out sm:text-3xl lg:text-4xl xl:text-5xl">
                     {email}
                   </h1>
                 </a>

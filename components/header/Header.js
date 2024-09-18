@@ -85,7 +85,7 @@ export default function Header() {
         initial={false}
       >
         <div className="grid grid-cols-12">
-        <div className="col-span-10 col-start-2 mx-auto flex h-[86px] min-h-[86px] w-full flex-row items-center">
+        <div className="col-span-12 lg:col-span-10 lg:col-start-2 mx-auto flex h-[86px] min-h-[86px] w-full flex-row items-center">
           {/* Logo */}
           <a href="/" className="hidden lg:block pr-5">
             <Image

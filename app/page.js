@@ -92,7 +92,7 @@ const Home = () => {
       />
 
       <section
-        className="bg-carrouselGradient flex flex-col items-center justify-center pb-20 pt-[160px]"
+        className="bg-carrouselGradient flex flex-col items-center justify-center pb-20 pt-[160px] px-4"
         id="produtos"
       >
         <div className="flex flex-col items-center justify-center">
@@ -115,13 +115,14 @@ const Home = () => {
         <Carousel1 />
         <div className="flex flex-row items-center pt-24">
           <div
-            class={`mr-4 flex h-10 w-[50px] items-center justify-center bg-primary-default`}
+            class={`mr-4 flex h-10 w-[50px] items-center justify-center bg-primary-default shrink-0`}
             style={{ clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)" }}
           >
             <Image
               src="/assets/icons/general/download.svg"
               width={24}
               height={24}
+              className="shrink-0"
             />
           </div>
           <p className="font-secondary text-lg text-typo-secondary">

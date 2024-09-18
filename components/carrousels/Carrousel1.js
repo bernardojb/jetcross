@@ -149,26 +149,25 @@ export default function Carousel1() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="relative mx-auto mb-3 h-[500px] w-[1428px]">
+            <div className="relative mx-auto mb-3 h-[500px] md:h-[350px] lg:h-[500px] max-w-[1428px] w-full">
               <Image
                 src={slides[currentIndex].image}
                 alt={slides[currentIndex].title}
                 layout="fill"
-                objectFit="cover"
                 objectPosition="center"
                 priority
                 quality={100}
-                className=""
+                className="object-contain"
               />
             </div>
             <div className="flex flex-row justify-center items-center max-w-[1428px] mx-auto">
               {slides[currentIndex].infos.map((i) => (
-                <div className="min-w-[460px] w-full text-center">
+                <div className="w-full text-center">
                   <h2 className="font-primary text-5xl uppercase text-typo-primary">
                     {i.title}
                     <span className="text-3xl"> {i.complement}</span>
                   </h2>
-                  <p className="font-secondary text-base text-typo-secondary">
+                  <p className="font-secondary text-base text-typo-secondary text-center">
                     {i.description}
                   </p>
                 </div>
