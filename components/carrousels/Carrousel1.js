@@ -192,7 +192,10 @@ export default function Carousel1() {
                 <div className="mx-4 mb-5 w-full text-center">
                   <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
                     {i.title}
-                    <span className="text-3xl"> {i.complement}</span>
+                    <span className="text-[26px] lg:text-3xl">
+                      {" "}
+                      {i.complement}
+                    </span>
                   </h2>
                   <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
                     {i.description}

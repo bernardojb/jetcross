@@ -34,7 +34,7 @@ import Marquee1 from "@/components/marquee/Marquee1";
 import Image from "next/image";
 import Content1_Inverted from "@/components/content/Content1_Inverted";
 
-import Carousel1 from "@/components/carrousels/Carrousel1";
+import Carrousel1 from "@/components/carrousels/Carrousel1";
 
 const Home = () => {
   return (
@@ -88,7 +88,7 @@ const Home = () => {
       />
 
       <section
-        className="bg-carrouselGradient flex flex-col items-center justify-center px-4 pb-20 pt-[160px]"
+        className="flex flex-col items-center justify-center bg-carrouselGradient px-4 pb-20 pt-[160px]"
         id="produtos"
       >
         <div className="flex flex-col items-center justify-center">
@@ -108,7 +108,7 @@ const Home = () => {
             O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.
           </p>
         </div>
-        <Carousel1 />
+        <Carrousel1 />
         <div className="flex flex-row items-center pt-24">
           <div
             class={`mr-4 flex h-10 w-[50px] shrink-0 items-center justify-center bg-primary-default`}
@@ -137,7 +137,7 @@ const Home = () => {
       <section className="flex justify-center bg-[#11190C] px-4 py-7">
         <Link href="#contato">
           <div
-            className="bg-accentGradient flex max-w-[1342px] flex-row items-center justify-around px-[50px] sm:px-20 md:px-20"
+            className="flex max-w-[1342px] flex-row items-center justify-around bg-accentGradient px-[50px] sm:px-20 md:px-20"
             style={{
               clipPath:
                 "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
@@ -205,7 +205,7 @@ const Home = () => {
       <Link href="#contato">
         <section className="relative flex h-[324px] w-full items-center justify-center overflow-hidden bg-primary-default">
           <div
-            className="bg-complementaryGradient z-10 mx-5 flex max-w-[1342px] flex-row items-center justify-around px-[50px] sm:px-20 md:px-20"
+            className="z-10 mx-5 flex max-w-[1342px] flex-row items-center justify-around bg-complementaryGradient px-[50px] sm:px-20 md:px-20"
             style={{
               clipPath:
                 "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
