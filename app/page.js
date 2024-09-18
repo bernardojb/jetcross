@@ -108,7 +108,7 @@ const Home = () => {
             width={630}
             className="mb-3"
           />
-          <p className="mb-14 font-secondary text-lg text-typo-secondary">
+          <p className="mb-14 font-secondary text-lg text-typo-secondary text-center">
             O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.
           </p>
         </div>
