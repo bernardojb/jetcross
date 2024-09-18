@@ -66,7 +66,7 @@ export default function ContactForm4({ background, title, text }) {
                   </div>
                 )}
                 {errors.name && (
-                  <p className="text-danger absolute top-11 font-secondary text-sm">
+                  <p className="absolute top-11 font-secondary text-sm text-danger">
                     {errors.name}
                   </p>
                 )}
@@ -102,7 +102,7 @@ export default function ContactForm4({ background, title, text }) {
                   </div>
                 )}
                 {errors.organization && (
-                  <p className="text-danger absolute top-11 font-secondary text-sm">
+                  <p className="absolute top-11 font-secondary text-sm text-danger">
                     {errors.organization}
                   </p>
                 )}
@@ -138,7 +138,7 @@ export default function ContactForm4({ background, title, text }) {
                   </div>
                 )}
                 {errors.budget && (
-                  <p className="text-danger absolute top-11 font-secondary text-sm">
+                  <p className="absolute top-11 font-secondary text-sm text-danger">
                     {errors.budget}
                   </p>
                 )}
@@ -174,7 +174,7 @@ export default function ContactForm4({ background, title, text }) {
                   </div>
                 )}
                 {errors.email && (
-                  <p className="text-danger absolute top-11 font-secondary text-sm">
+                  <p className="absolute top-11 font-secondary text-sm text-danger">
                     {errors.email}
                   </p>
                 )}
@@ -210,7 +210,7 @@ export default function ContactForm4({ background, title, text }) {
                   </div>
                 )}
                 {errors.message && (
-                  <p className="text-danger absolute top-11 font-secondary text-sm ">
+                  <p className="absolute top-11 font-secondary text-sm text-danger ">
                     {errors.message}
                   </p>
                 )}

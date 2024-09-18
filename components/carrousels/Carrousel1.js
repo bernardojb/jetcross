@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const slides = [
   {
     id: 1,
-    image: "/assets/images/aquaseeker-01.png",
+    image: "/assets/images/mobile/aquaseeker-01.png",
     infos: [
       {
         id: 1,
@@ -26,7 +26,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/assets/images/aquaseeker-02.png",
+    image: "/assets/images/mobile/aquaseeker-02.png",
     infos: [
       {
         id: 1,
@@ -50,55 +50,44 @@ const slides = [
   },
   {
     id: 3,
-    image: "/assets/images/aquaseeker-03.png",
+    image: "/assets/images/mobile/aquaseeker-03.png",
     infos: [
       {
         id: 1,
         title: "customização completa",
         complement: "",
-        description: "Personalize nosso layout exclusivo Jetcross da forma que quiser.",
+        description:
+          "Personalize nosso layout exclusivo Jetcross da forma que quiser.",
       },
-    //   {
-    //     id: 2,
-    //     title: "para-brisa",
-    //     complement: "",
-    //     description: "Sport em fibra",
-    //   },
-    //   {
-    //     id: 3,
-    //     title: "Volante",
-    //     complement: "",
-    //     description: "Esportivo",
-    //   },
     ],
   },
   {
     id: 4,
-    image: "/assets/images/aquaseeker-04.png",
+    image: "/assets/images/mobile/aquaseeker-04.png",
     infos: [
-        {
-          id: 1,
-          title: "Tapetes",
-          complement: "",
-          description: "Com layout exclusivo Jetcross em EVA",
-        },
-        {
-          id: 2,
-          title: "para-brisa",
-          complement: "",
-          description: "Sport em fibra",
-        },
-        {
-          id: 3,
-          title: "Volante",
-          complement: "",
-          description: "Esportivo",
-        },
-      ],
+      {
+        id: 1,
+        title: "Tapetes",
+        complement: "",
+        description: "Com layout exclusivo Jetcross em EVA",
+      },
+      {
+        id: 2,
+        title: "para-brisa",
+        complement: "",
+        description: "Sport em fibra",
+      },
+      {
+        id: 3,
+        title: "Volante",
+        complement: "",
+        description: "Esportivo",
+      },
+    ],
   },
   {
     id: 5,
-    image: "/assets/images/aquaseeker-05.png",
+    image: "/assets/images/mobile/aquaseeker-05.png",
     infos: [
       {
         id: 1,
@@ -124,7 +113,6 @@ const slides = [
 
 export default function Carousel1() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [canNavigate, setCanNavigate] = useState(true)
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -140,7 +128,7 @@ export default function Carousel1() {
 
   return (
     <div className="relative mx-auto w-full">
-      <div className="mb-6 overflow-hidden image-shaddow">
+      <div className="image-shaddow mb-6 overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -149,7 +137,7 @@ export default function Carousel1() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="relative mx-auto mb-3 h-[500px] md:h-[350px] lg:h-[500px] max-w-[1428px] w-full">
+            <div className="relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
               <Image
                 src={slides[currentIndex].image}
                 alt={slides[currentIndex].title}
@@ -160,14 +148,14 @@ export default function Carousel1() {
                 className="object-contain"
               />
             </div>
-            <div className="flex flex-row justify-center items-center max-w-[1428px] mx-auto">
+            <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
               {slides[currentIndex].infos.map((i) => (
-                <div className="w-full text-center">
-                  <h2 className="font-primary text-5xl uppercase text-typo-primary">
+                <div className="mx-4 mb-5 w-full text-center">
+                  <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
                     {i.title}
                     <span className="text-3xl"> {i.complement}</span>
                   </h2>
-                  <p className="font-secondary text-base text-typo-secondary text-center">
+                  <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
                     {i.description}
                   </p>
                 </div>

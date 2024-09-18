@@ -92,7 +92,7 @@ const Home = () => {
       />
 
       <section
-        className="bg-carrouselGradient flex flex-col items-center justify-center pb-20 pt-[160px] px-4"
+        className="bg-carrouselGradient flex flex-col items-center justify-center px-4 pb-20 pt-[160px]"
         id="produtos"
       >
         <div className="flex flex-col items-center justify-center">
@@ -108,14 +108,14 @@ const Home = () => {
             width={630}
             className="mb-3"
           />
-          <p className="mb-14 font-secondary text-lg text-typo-secondary text-center">
+          <p className="mb-14 text-center font-secondary text-lg text-typo-secondary">
             O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.
           </p>
         </div>
         <Carousel1 />
         <div className="flex flex-row items-center pt-24">
           <div
-            class={`mr-4 flex h-10 w-[50px] items-center justify-center bg-primary-default shrink-0`}
+            class={`mr-4 flex h-10 w-[50px] shrink-0 items-center justify-center bg-primary-default`}
             style={{ clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)" }}
           >
             <Image
@@ -246,7 +246,7 @@ const Home = () => {
             src="assets/icons/general/J.svg"
             width={1050}
             height={730}
-            className="absolute left-[-150px] sm:left-[-300px] md:sm:left-[-375px] z-0 scale-150 md:scale-100"
+            className="absolute left-[-150px] z-0 scale-150 sm:left-[-300px] md:sm:left-[-375px] md:scale-100"
           />
         </section>
       </Link>

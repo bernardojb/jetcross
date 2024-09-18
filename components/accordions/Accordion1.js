@@ -119,17 +119,19 @@ const AccordionSimpleCard = ({ i, expanded, setExpanded, ...props }) => {
             <h1
               className={`title font-primary text-4xl font-bold uppercase sm:text-5xl ${
                 isOpen ? "text-primary-default" : "text-typo-secondary"
-              } transition duration-300 ease-out group-hover:text-primary-default group-hover:transition group-hover:duration-300 group-hover:ease-out mr-6 `}
+              } mr-6 transition duration-300 ease-out group-hover:text-primary-default group-hover:transition group-hover:duration-300 group-hover:ease-out `}
             >
               {props.title}
             </h1>
-            <div className={`absolute right-0 top-[50%] translate-y-[-50%]"] ${isOpen ? "-rotate-90" : "rotate-90"} transition duration-300 ease-in-out`}>
+            <div
+              className={`absolute right-0 top-[50%] translate-y-[-50%] ${isOpen ? "-rotate-90" : "rotate-90"}  transition duration-300 ease-in-out`}
+            >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <g clip-path="url(#clip0_941_3192)">
                   <path
                     d="M11.3003 12.0005L2.52103 24L22.5 11.9942H22.4579L2.5 0L11.2793 11.9995"
                     fill={isOpen ? "#FAFF00" : "#C0C0C0"}
-                    className="group-hover:fill-[#FAFF00] transition duration-300 ease-out group-hover:transition group-hover:duration-300 group-hover:ease-out"
+                    className="transition duration-300 ease-out group-hover:fill-[#FAFF00] group-hover:transition group-hover:duration-300 group-hover:ease-out"
                   />
                 </g>
                 <defs>
