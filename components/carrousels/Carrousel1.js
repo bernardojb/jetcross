@@ -114,7 +114,7 @@ const slides = [
 export default function Carousel1() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [canNavigate, setCanNavigate] = useState(true);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  // const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayRef = useRef();
 
   const navigate = useCallback(
@@ -143,29 +143,29 @@ export default function Carousel1() {
     autoPlayRef.current = handleNext;
   }, [handleNext]);
 
-  useEffect(() => {
-    const play = () => {
-      if (isAutoPlaying) {
-        autoPlayRef.current();
-      }
-    };
+  // useEffect(() => {
+  //   const play = () => {
+  //     if (isAutoPlaying) {
+  //       autoPlayRef.current();
+  //     }
+  //   };
 
-    const autoPlayInterval = setInterval(play, 3000);
+  //   const autoPlayInterval = setInterval(play, 3000);
 
-    return () => {
-      clearInterval(autoPlayInterval);
-      setCanNavigate(true);
-    };
-  }, [isAutoPlaying]);
+  //   return () => {
+  //     clearInterval(autoPlayInterval);
+  //     setCanNavigate(true);
+  //   };
+  // }, [isAutoPlaying]);
 
-  const handleMouseEnter = () => setIsAutoPlaying(false);
-  const handleMouseLeave = () => setIsAutoPlaying(true);
+  // const handleMouseEnter = () => setIsAutoPlaying(false);
+  // const handleMouseLeave = () => setIsAutoPlaying(true);
 
   return (
     <div
       className="relative mx-auto w-full"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      // onMouseEnter={handleMouseEnter}
+      //       onMouseLeave={handleMouseLeave}
     >
       <div className="image-shaddow mb-6 overflow-hidden">
         <AnimatePresence mode="wait">
