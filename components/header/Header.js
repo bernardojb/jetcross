@@ -85,43 +85,43 @@ export default function Header() {
         initial={false}
       >
         <div className="grid grid-cols-12">
-        <div className="col-span-12 lg:col-span-10 lg:col-start-2 mx-auto flex h-[86px] min-h-[86px] w-full flex-row items-center">
-          {/* Logo */}
-          <a href="/" className="hidden lg:block pr-5">
-            <Image
-              src="/assets/icons/general/jetcross-full-logo.svg"
-              alt="Hokup Logo"
-              width={270}
-              height={46}
-            />
-          </a>
+          <div className="col-span-12 mx-auto flex h-[86px] min-h-[86px] w-full flex-row items-center lg:col-span-10 lg:col-start-2">
+            {/* Logo */}
+            <a href="/" className="hidden pr-5 lg:block">
+              <Image
+                src="/assets/icons/general/jetcross-full-logo.svg"
+                alt="Hokup Logo"
+                width={270}
+                height={46}
+              />
+            </a>
 
-          <a href="/" className="pr-5 lg:hidden">
-            <Image
-              src="/assets/icons/general/jetcross-full-logo.svg"
-              alt="Hokup Logo"
-              width={175}
-              height={35}
-            />
-          </a>
+            <a href="/" className="pr-5 lg:hidden">
+              <Image
+                src="/assets/icons/general/jetcross-full-logo.svg"
+                alt="Hokup Logo"
+                width={175}
+                height={35}
+              />
+            </a>
 
-          {/* Navigation */}
-          <div
-            className={`ml-auto hidden w-full flex-row items-center justify-end lg:flex`}
-          >
-            {routerData.map((i) => (
-              <Link
-                key={i.id}
-                href={i.href}
-                className={`hover:text-primary-dark ml-10 font-secondary text-lg font-bold uppercase italic ${i.href === pathname ? "text-primary-default" : "text-typo-primary"}`}
-              >
-                {i.title}
-              </Link>
-            ))}
-          </div>
+            {/* Navigation */}
+            <div
+              className={`ml-auto hidden w-full flex-row items-center justify-end lg:flex`}
+            >
+              {routerData.map((i) => (
+                <Link
+                  key={i.id}
+                  href={i.href}
+                  className={`ml-10 font-secondary text-lg font-bold uppercase italic transition duration-300 ease-out hover:text-primary-default ${i.href === pathname ? "text-primary-default" : "text-typo-primary"}`}
+                >
+                  {i.title}
+                </Link>
+              ))}
+            </div>
 
-          {/* Hamburger */}
-          {/* <motion.nav
+            {/* Hamburger */}
+            {/* <motion.nav
             initial={false}
             animate={toggle ? "open" : "closed"}
             className="ml-auto block lg:hidden"
@@ -132,15 +132,14 @@ export default function Header() {
               }}
             />
           </motion.nav> */}
-          <Link
-            href="#contato"
-            className={`hover:text-primary-dark ml-auto block font-secondary text-lg font-bold uppercase italic text-typo-primary lg:hidden`}
-          >
-            CONTATO
-          </Link>
+            <Link
+              href="#contato"
+              className={`hover:text-primary-dark ml-auto block font-secondary text-lg font-bold uppercase italic text-typo-primary lg:hidden`}
+            >
+              CONTATO
+            </Link>
+          </div>
         </div>
-        </div>
-        
 
         {/* <div
           className={`${toggle ? "" : "hidden"} container flex h-full flex-col justify-between lg:hidden`}

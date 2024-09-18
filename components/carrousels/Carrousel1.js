@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -113,21 +113,60 @@ const slides = [
 
 export default function Carousel1() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [canNavigate, setCanNavigate] = useState(true);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const autoPlayRef = useRef();
 
-  const handlePrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1,
-    );
-  };
+  const navigate = useCallback(
+    (direction) => {
+      if (!canNavigate) return;
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1,
-    );
-  };
+      setCanNavigate(false);
+      setCurrentIndex((prevIndex) => {
+        if (direction === "prev") {
+          return prevIndex === 0 ? slides.length - 1 : prevIndex - 1;
+        } else {
+          return prevIndex === slides.length - 1 ? 0 : prevIndex + 1;
+        }
+      });
+
+      // Re-enable navigation after a delay
+      setTimeout(() => setCanNavigate(true), 500);
+    },
+    [canNavigate],
+  );
+
+  const handlePrevious = useCallback(() => navigate("prev"), [navigate]);
+  const handleNext = useCallback(() => navigate("next"), [navigate]);
+
+  useEffect(() => {
+    autoPlayRef.current = handleNext;
+  }, [handleNext]);
+
+  useEffect(() => {
+    const play = () => {
+      if (isAutoPlaying) {
+        autoPlayRef.current();
+      }
+    };
+
+    const autoPlayInterval = setInterval(play, 3000);
+
+    return () => {
+      clearInterval(autoPlayInterval);
+      setCanNavigate(true);
+    };
+  }, [isAutoPlaying]);
+
+  const handleMouseEnter = () => setIsAutoPlaying(false);
+  const handleMouseLeave = () => setIsAutoPlaying(true);
 
   return (
-    <div className="relative mx-auto w-full">
+    <div
+      className="relative mx-auto w-full"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="image-shaddow mb-6 overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div

@@ -50,11 +50,7 @@ const Home = () => {
               text="Produtos"
               link="#produtos"
             />
-            <Button1
-              style="bg-[#FFFFFF1A] text-typo-primary"
-              text="Contato"
-              link="#contato"
-            />
+            <Button1 style="bg-[#FFFFFF1A]" text="Contato" link="#contato" />
           </>
         }
       />
