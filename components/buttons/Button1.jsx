@@ -9,12 +9,14 @@ const Button1 = ({ link, text, style, target, arrow, onClick }) => {
     initial: {
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
       scale: 1,
+      opacity: "1",
     },
     hover: {
       clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)",
       scale: 1,
       backgroundColor: "#ffffff",
       color: "black",
+      opacity: "1",
     },
   };
 
