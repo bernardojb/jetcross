@@ -238,8 +238,8 @@ const Home = () => {
           }
         />
 
-        <div className="flex h-[730px] w-full items-center">
-          <Link href="#contato" className="w-full ">
+        <div className="relative flex h-[730px] w-full items-center">
+          <Link href="#contato" className="absolute w-full">
             <motion.section
               initial="initial"
               animate={isHovered ? "hover" : "initial"}

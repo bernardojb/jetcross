@@ -14,8 +14,8 @@ import { AnimatePresence } from "framer-motion";
 import { Suspense } from "react";
 
 export const viewport = {
-  themeColor: 'black',
-}
+  themeColor: "black",
+};
 
 //Setup & Meta
 export const inter = Inter({
@@ -58,12 +58,12 @@ export const metadata = {
     siteName: metaData.subtitle,
     images: [
       {
-        url: "https://i.imgur.com/Wz7gzXA.jpeg",
+        url: "https://imgur.com/h38et8B",
         width: 1200,
         height: 600,
       },
       {
-        url: "https://i.imgur.com/Wz7gzXA.jpeg",
+        url: "https://imgur.com/h38et8B",
         width: 1800,
         height: 1600,
       },
