@@ -36,11 +36,11 @@ const generalData = {
     //     href: '',
     //     image: '/assets/icons/social/instagram.svg',
     // },
-    // {
-    //     name:'Youtube',
-    //     href: '',
-    //     image: '/assets/icons/social/instagram.svg',
-    // },
+    {
+      name: "Youtube",
+      href: "https://www.youtube.com/@jetcross",
+      image: "/assets/icons/social/youtube.svg",
+    },
     // {
     //     name:'Threads',
     //     href: '',

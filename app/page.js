@@ -1,6 +1,7 @@
 "use client";
 //Setup
 import * as React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 //Components
@@ -21,6 +22,9 @@ import { motion } from "framer-motion";
 import Animation from "@/components/animations/Animation";
 
 const Home = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [modal, setModal] = useState(false);
+
   const ctaPathVariants = {
     initial: {
       clipPath: "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
@@ -38,11 +42,11 @@ const Home = () => {
     initial: {
       clipPath: "polygon(50px 0, 100% 0%, calc(100% - 50px) 100%, 0% 100%)",
       backgroundImage: "linear-gradient(90deg, #3ED1FF 0%, #9BE7FF 100%)",
-      scale: 1,
+      // scale: 1,
     },
     hover: {
       clipPath: "polygon(0 0, calc(100% - 50px) 0, 100% 100%, 50px 100%)",
-      scale: 1.05,
+      // scale: 1.05,
       backgroundImage: "linear-gradient(90deg, #fff 0%, #fff 100%)",
     },
   };
@@ -143,7 +147,7 @@ const Home = () => {
               }}
             >
               <Image
-                src="/assets/icons/general/download.svg"
+                src="/assets/icons/general/play.svg"
                 width={24}
                 height={24}
                 className="shrink-0"
@@ -152,12 +156,12 @@ const Home = () => {
             <p className="font-secondary text-lg text-typo-secondary">
               <a
                 target="_blank"
-                href="/assets/main/FichaTécnica-AquaSeeker.pdf"
-                className="text-primary-default underline transition duration-300 ease-out hover:text-typo-primary hover:transition hover:duration-200 hover:ease-out"
+                // href="/assets/main/FichaTécnica-AquaSeeker.pdf"
+                className="cursor-pointer text-primary-default underline transition duration-300 ease-out hover:text-typo-primary hover:transition hover:duration-200 hover:ease-out"
+                onClick={() => setModal(true)}
               >
-                Faça o download da ficha técnica
-              </a>{" "}
-              para visualizar as informações completas do Aqua Seeker
+                Assista o vídeo de demonstração do AquaSeeker!
+              </a>
             </p>
           </div>
         </section>
@@ -235,66 +239,65 @@ const Home = () => {
         />
 
         <div className="flex h-[730px] w-full items-center">
-          <motion.section
-            initial="initial"
-            whileHover="hover"
-            className="w-full"
-          >
-            <Link href="#contato" className="w-full ">
-              <motion.section
-                variants={ctaFullPathVariantsBg}
+          <Link href="#contato" className="w-full ">
+            <motion.section
+              initial="initial"
+              animate={isHovered ? "hover" : "initial"}
+              variants={ctaFullPathVariantsBg}
+              transition={{
+                duration: 0.2,
+                delay: 0,
+                ease: [0.53, 0, 0, 1],
+              }}
+              className="relative flex w-full items-center justify-center overflow-hidden"
+            >
+              <motion.div
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                variants={ctaFullPathVariants}
                 transition={{
                   duration: 0.2,
                   delay: 0,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="relative flex w-full items-center justify-center overflow-hidden"
+                className="z-10 mx-5 flex max-w-[1342px] flex-row items-center justify-around bg-complementaryGradient px-[50px] sm:px-20 md:px-20"
               >
-                <motion.div
-                  variants={ctaFullPathVariants}
-                  transition={{
-                    duration: 0.2,
-                    delay: 0,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
-                  className="z-10 mx-5 flex max-w-[1342px] flex-row items-center justify-around bg-complementaryGradient px-[50px] sm:px-20 md:px-20"
-                >
-                  <div className="relative hidden h-[26px] w-[74px] object-cover md:block">
-                    <Image src="assets/icons/general/cta-arrow.svg" fill />
-                  </div>
-                  <div className="relative h-[24px] w-[24px] shrink-0 object-cover md:hidden">
-                    <Image src="assets/icons/general/arrow.svg" fill />
-                  </div>
+                <div className="relative hidden h-[26px] w-[74px] object-cover md:block">
+                  <Image src="assets/icons/general/cta-arrow.svg" fill />
+                </div>
+                <div className="relative h-[24px] w-[24px] shrink-0 object-cover md:hidden">
+                  <Image src="assets/icons/general/arrow.svg" fill />
+                </div>
 
-                  <h1 className="title px-5 py-5 text-center font-primary text-2xl tracking-[-1.3px] text-black md:max-w-none md:px-5 md:py-8 md:text-5xl">
-                    PEÇA SEU JETCROSS AGORA
-                  </h1>
+                <h1 className="title px-5 py-5 text-center font-primary text-2xl tracking-[-1.3px] text-black md:max-w-none md:px-5 md:py-8 md:text-5xl">
+                  PEÇA SEU JETCROSS AGORA
+                </h1>
 
-                  <div className="relative hidden h-[26px] w-[74px] object-cover md:block">
-                    <Image
-                      fill
-                      src="assets/icons/general/cta-arrow.svg"
-                      className="rotate-180"
-                    />
-                  </div>
+                <div className="relative hidden h-[26px] w-[74px] object-cover md:block">
+                  <Image
+                    fill
+                    src="assets/icons/general/cta-arrow.svg"
+                    className="rotate-180"
+                  />
+                </div>
 
-                  <div className="relative h-[24px] w-[24px] shrink-0 object-cover md:hidden">
-                    <Image
-                      fill
-                      src="assets/icons/general/arrow.svg"
-                      className="rotate-180"
-                    />
-                  </div>
-                </motion.div>
-                <Image
-                  src="assets/icons/general/J.svg"
-                  width={1050}
-                  height={730}
-                  className="absolute left-[-150px] z-0 scale-150 sm:left-[-300px] md:sm:left-[-375px] md:scale-100"
-                />
-              </motion.section>
-            </Link>
-          </motion.section>
+                <div className="relative h-[24px] w-[24px] shrink-0 object-cover md:hidden">
+                  <Image
+                    fill
+                    src="assets/icons/general/arrow.svg"
+                    className="rotate-180"
+                  />
+                </div>
+              </motion.div>
+              <Image
+                src="assets/icons/general/J.svg"
+                width={1050}
+                height={730}
+                className="absolute left-[-150px] z-0 scale-150 sm:left-[-300px] md:sm:left-[-375px] md:scale-100"
+              />
+            </motion.section>
+          </Link>
+          {/* </motion.section> */}
         </div>
 
         <ContactForm2
@@ -334,6 +337,42 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {modal && (
+          <div className="fixed left-0 top-0 z-[999] h-screen w-full bg-[#00000081] backdrop-blur-xl">
+            <div className="mx-4 flex aspect-auto h-full items-center justify-center px-4 py-20">
+              <iframe
+                // width="1903"
+                // height="750"
+                src="https://www.youtube.com/embed/CfMy-qMR-ow"
+                title="Aqua Seeker - Jetcross"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                className="h-full w-full"
+              ></iframe>
+            </div>
+            <buton
+              className="absolute right-5 top-5 cursor-pointer text-red-500"
+              onClick={() => setModal(false)}
+            >
+              <div
+                class={`flex h-10 w-[50px] items-center justify-center bg-primary-default hover:bg-typo-primary`}
+                style={{
+                  clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)",
+                }}
+              >
+                <Image
+                  src="/assets/icons/general/plus.svg"
+                  width={24}
+                  height={24}
+                  className="rotate-45 brightness-0"
+                />
+              </div>
+            </buton>
+          </div>
+        )}
       </div>
     </Animation>
   );

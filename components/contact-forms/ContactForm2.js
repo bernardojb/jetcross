@@ -17,7 +17,7 @@ function ContactForm2({
       <div className="grid grid-cols-12 gap-4 gap-y-20 lg:gap-y-0">
         <div className="col-span-12 lg:col-span-3 lg:col-start-2">
           <div className="flex flex-col">
-            <p className="mb-3 font-secondary text-base uppercase text-primary-light">
+            <p className="mb-3 font-secondary text-base uppercase italic text-primary-light">
               {subtitle}
             </p>
             <h1 className="title mb-6 font-primary text-4xl font-bold uppercase text-typo-primary sm:text-5xl">
@@ -49,7 +49,7 @@ function ContactForm2({
               </p>
               <div className="w-fit">
                 <a href={`mailto:${email}`}>
-                  <h1 className="break-all lg:break-keep font-primary text-[22px] font-bold uppercase text-typo-primary transition duration-300 ease-out hover:text-primary-default hover:transition hover:duration-300 hover:ease-out sm:text-3xl lg:text-4xl xl:text-5xl">
+                  <h1 className="break-all font-primary text-[22px] font-bold uppercase text-typo-primary transition duration-300 ease-out hover:text-primary-default hover:transition hover:duration-300 hover:ease-out sm:text-3xl lg:break-keep lg:text-4xl xl:text-5xl">
                     {email}
                   </h1>
                 </a>
