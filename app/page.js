@@ -339,7 +339,10 @@ const Home = () => {
         </section>
 
         {modal && (
-          <div className="fixed left-0 top-0 z-[999] h-screen w-full bg-[#00000081] backdrop-blur-xl">
+          <div
+            className="fixed left-0 top-0 z-[999] h-screen w-full bg-[#00000081] backdrop-blur-xl"
+            onClick={() => setModal(false)}
+          >
             <div className="mx-4 flex aspect-auto h-full items-center justify-center px-4 py-20">
               <iframe
                 // width="1903"
