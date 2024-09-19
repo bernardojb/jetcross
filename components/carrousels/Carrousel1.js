@@ -225,11 +225,16 @@ export default function Carousel1() {
           {slides.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`h-3 w-3 rounded-full ${
-                index === currentIndex ? "bg-primary-default" : "bg-white"
-              }`}
+              onClick={() => {
+                if (canNavigate) {
+                  setCurrentIndex(index);
+                  setCanNavigate(false);
+                  setTimeout(() => setCanNavigate(true), 500);
+                }
+              }}
+              className={`h-3 w-3 rounded-full ${index === currentIndex ? "bg-primary-default" : "bg-white"} `}
               aria-label={`Go to slide ${index + 1}`}
+              disabled={!canNavigate}
             />
           ))}
         </div>
