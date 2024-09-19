@@ -208,7 +208,14 @@ export default function Carousel1() {
       </div>
 
       <div className="absolute bottom-[-3rem] left-0 right-0 flex items-center justify-center space-x-4">
-        <button
+        <motion.button
+          initial={{ backgroundColor: "#faff00" }}
+          whileHover={{ backgroundColor: "#fff" }}
+          transition={{
+            duration: 0.2,
+            delay: 0,
+            ease: [0.16, 1, 0.3, 1],
+          }}
           onClick={handlePrevious}
           class={`flex h-10 w-[50px] items-center justify-center bg-primary-default`}
           style={{ clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)" }}
@@ -219,7 +226,7 @@ export default function Carousel1() {
             height={24}
             className="rotate-180"
           />
-        </button>
+        </motion.button>
 
         <div className="flex space-x-2 ">
           {slides.map((_, index) => (
@@ -239,13 +246,20 @@ export default function Carousel1() {
           ))}
         </div>
 
-        <button
+        <motion.button
+          initial={{ backgroundColor: "#faff00" }}
+          whileHover={{ backgroundColor: "#fff" }}
+          transition={{
+            duration: 0.2,
+            delay: 0,
+            ease: [0.16, 1, 0.3, 1],
+          }}
           onClick={handleNext}
           class={`flex h-10 w-[50px] items-center justify-center bg-primary-default`}
           style={{ clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)" }}
         >
           <Image src="/assets/icons/general/arrow.svg" width={24} height={24} />
-        </button>
+        </motion.button>
       </div>
     </div>
   );

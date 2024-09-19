@@ -23,9 +23,6 @@ const Button1 = ({ link, text, style, target, arrow, onClick }) => {
       <Link href={link} target={target} onClick={onClick}>
         <motion.div
           variants={clipPathVariants}
-          // initial="initial"
-          // whileHover="hover"
-          // animate="initial"
           transition={{
             duration: 0.2,
             delay: 0,
