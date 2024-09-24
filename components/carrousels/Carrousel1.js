@@ -210,11 +210,7 @@ export default function Carousel1() {
   }, []);
 
   return (
-    <div
-      className="relative mx-auto w-full"
-      // onMouseEnter={handleMouseEnter}
-      //       onMouseLeave={handleMouseLeave}
-    >
+    <div className="relative mx-auto w-full">
       <div className="image-shaddow mb-6 overflow-hidden">
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
