@@ -229,7 +229,6 @@ export default function Carousel1() {
                 priority
                 quality={100}
                 className="object-contain"
-                // placeholder="blur"
               />
             </div>
             <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
