@@ -4,11 +4,16 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 // import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Image1 from "@/public/assets/images/mobile/aquaseeker-01.png";
+import Image2 from "@/public/assets/images/mobile/aquaseeker-02.png";
+import Image3 from "@/public/assets/images/mobile/aquaseeker-03.png";
+import Image4 from "@/public/assets/images/mobile/aquaseeker-04.png";
+import Image5 from "@/public/assets/images/mobile/aquaseeker-05.png";
 
 const slides = [
   {
     id: 1,
-    image: "/assets/images/mobile/aquaseeker-01.png",
+    image: Image1,
     infos: [
       {
         id: 1,
@@ -26,7 +31,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/assets/images/mobile/aquaseeker-02.png",
+    image: Image2,
     infos: [
       {
         id: 1,
@@ -50,7 +55,7 @@ const slides = [
   },
   {
     id: 3,
-    image: "/assets/images/mobile/aquaseeker-03.png",
+    image: Image3,
     infos: [
       {
         id: 1,
@@ -63,7 +68,7 @@ const slides = [
   },
   {
     id: 4,
-    image: "/assets/images/mobile/aquaseeker-04.png",
+    image: Image4,
     infos: [
       {
         id: 1,
@@ -87,7 +92,7 @@ const slides = [
   },
   {
     id: 5,
-    image: "/assets/images/mobile/aquaseeker-05.png",
+    image: Image5,
     infos: [
       {
         id: 1,
@@ -185,6 +190,7 @@ export default function Carousel1() {
                 priority
                 quality={100}
                 className="object-contain"
+                placeholder="blur"
               />
             </div>
             <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
