@@ -86,7 +86,7 @@ const Home = () => {
         />
 
         <div
-          className="absolute top-[100vh] max-w-[100vw]"
+          className="absolute top-[100svh] max-w-[100vw]"
           style={{ zIndex: "10 !important" }}
         >
           <div className="rotate-[1.8deg]">
@@ -94,7 +94,7 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="absolute top-[100vh] max-w-[100vw]"
+          className="absolute top-[100svh] max-w-[100vw]"
           style={{ zIndex: "10 !important" }}
         >
           <div className="rotate-[-1.13deg]">
