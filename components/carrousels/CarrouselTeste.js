@@ -12,7 +12,7 @@ import Image5 from "@/public/assets/images/mobile/aquaseeker-05.png";
 const slides = [
   {
     id: 1,
-    image: Image1,
+    image: "/assets/images/mobile/aquaseeker-01.png",
     infos: [
       {
         id: 1,
@@ -30,7 +30,7 @@ const slides = [
   },
   {
     id: 2,
-    image: Image2,
+    image: "/assets/images/mobile/aquaseeker-02.png",
     infos: [
       {
         id: 1,
@@ -54,7 +54,7 @@ const slides = [
   },
   {
     id: 3,
-    image: Image3,
+    image: "/assets/images/mobile/aquaseeker-03.png",
     infos: [
       {
         id: 1,
@@ -67,7 +67,7 @@ const slides = [
   },
   {
     id: 4,
-    image: Image4,
+    image: "/assets/images/mobile/aquaseeker-04.png",
     infos: [
       {
         id: 1,
@@ -91,7 +91,7 @@ const slides = [
   },
   {
     id: 5,
-    image: Image5,
+    image: "/assets/images/mobile/aquaseeker-05.png",
     infos: [
       {
         id: 1,
