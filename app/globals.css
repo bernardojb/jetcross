@@ -19,3 +19,9 @@
 .image-shaddow{
     filter: drop-shadow(20px 35px 250px rgba(255, 237, 140, 0.28)) !important;
 }
+
+/* .image-container {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  } */

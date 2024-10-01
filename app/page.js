@@ -18,8 +18,12 @@ import ContactForm2 from "@/components/contact-forms/ContactForm2";
 import Marquee1 from "@/components/marquee/Marquee1";
 import Content1_Inverted from "@/components/content/Content1_Inverted";
 import Carrousel1 from "@/components/carrousels/Carrousel1";
+// import Carrousel2 from "@/components/carrousels/Carrousel2";
+import CarrouselTeste from "@/components/carrousels/CarrouselTeste";
 import { motion } from "framer-motion";
 import Animation from "@/components/animations/Animation";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -118,9 +122,13 @@ const Home = () => {
         />
 
         <section
-          className="flex flex-col items-center justify-center bg-carrouselGradient px-4 pb-20 pt-[160px]"
+          className="bg-carrouselGradient px-4 pb-20 pt-[160px]"
           id="produtos"
         >
+          {/* <section
+          className="flex flex-col items-center justify-center bg-carrouselGradient px-4 pb-20 pt-[160px]"
+          id="produtos"
+        ></section> */}
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/icons/general/jetcross-type-logo.svg"
@@ -138,8 +146,13 @@ const Home = () => {
               O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.
             </p>
           </div>
-          <Carrousel1 />
-          <div className="flex flex-row items-center pt-24">
+
+          {/* <Carrousel1 /> */}
+
+          {/* <Carrousel2 /> */}
+          <CarrouselTeste />
+
+          <div className="flex flex-row items-center justify-center pt-24">
             <div
               class={`mr-4 flex h-10 w-[50px] shrink-0 items-center justify-center bg-primary-default`}
               style={{
@@ -165,6 +178,8 @@ const Home = () => {
             </p>
           </div>
         </section>
+
+        {/* <section className="teste h-28 bg-red-500"></section> */}
 
         <motion.section className="flex justify-center bg-[#11190C] px-10 py-7">
           <motion.div initial="initial" whileHover="hover">

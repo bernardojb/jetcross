@@ -118,6 +118,8 @@ const slides = [
 export default function Carousel1() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [canNavigate, setCanNavigate] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const carouselRef = useRef(null);
 
   const navigate = useCallback(
     (direction) => {
@@ -147,6 +149,25 @@ export default function Carousel1() {
     });
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 },
+    );
+
+    if (carouselRef.current) {
+      observer.observe(carouselRef.current);
+    }
+
+    return () => {
+      if (carouselRef.current) {
+        observer.unobserve(carouselRef.current);
+      }
+    };
+  }, []);
+
   const setCurrentIndexCallback = useCallback((index) => {
     setCurrentIndex(index);
     setCanNavigate(false);
@@ -154,46 +175,48 @@ export default function Carousel1() {
   }, []);
 
   return (
-    <div className="relative mx-auto w-full">
-      <div className="image-shaddow mb-6 overflow-hidden">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
-              <Image
-                src={slides[currentIndex].image}
-                alt={slides[currentIndex].title}
-                layout="fill"
-                objectPosition="center"
-                priority
-                quality={100}
-                className="object-contain"
-              />
-            </div>
-            <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
-              {slides[currentIndex].infos.map((i) => (
-                <div className="mx-4 mb-5 w-full text-center">
-                  <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
-                    {i.title}
-                    <span className="text-[26px] lg:text-3xl">
-                      {" "}
-                      {i.complement}
-                    </span>
-                  </h2>
-                  <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
-                    {i.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+    <div className="relative mx-auto w-full" ref={carouselRef}>
+      {isVisible && (
+        <div className="image-shaddow mb-6 overflow-hidden">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <div className="image-container relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
+                <Image
+                  src={slides[currentIndex].image}
+                  alt={`Slide ${currentIndex + 1}`}
+                  fill
+                  //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  quality={100}
+                  className="object-contain"
+                />
+              </div>
+              <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
+                {slides[currentIndex].infos.map((i) => (
+                  <div key={i.id} className="mx-4 mb-5 w-full text-center">
+                    <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
+                      {i.title}
+                      <span className="text-[26px] lg:text-3xl">
+                        {" "}
+                        {i.complement}
+                      </span>
+                    </h2>
+                    <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
+                      {i.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      )}
 
       <div className="absolute bottom-[-3rem] left-0 right-0 flex items-center justify-center space-x-4">
         <motion.button
@@ -205,13 +228,14 @@ export default function Carousel1() {
             ease: [0.16, 1, 0.3, 1],
           }}
           onClick={handlePrevious}
-          class={`flex h-10 w-[50px] items-center justify-center bg-primary-default`}
+          className="flex h-10 w-[50px] items-center justify-center bg-primary-default"
           style={{ clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)" }}
         >
           <Image
             src="/assets/icons/general/arrow.svg"
             width={24}
             height={24}
+            alt="Previous"
             className="rotate-180"
           />
         </motion.button>
@@ -225,7 +249,9 @@ export default function Carousel1() {
                   setCurrentIndexCallback(index);
                 }
               }}
-              className={`h-3 w-3 rounded-full ${index === currentIndex ? "bg-primary-default" : "bg-white"} `}
+              className={`h-3 w-3 rounded-full ${
+                index === currentIndex ? "bg-primary-default" : "bg-white"
+              } `}
               aria-label={`Go to slide ${index + 1}`}
               disabled={!canNavigate}
             />
@@ -241,10 +267,15 @@ export default function Carousel1() {
             ease: [0.16, 1, 0.3, 1],
           }}
           onClick={handleNext}
-          class={`flex h-10 w-[50px] items-center justify-center bg-primary-default`}
+          className="flex h-10 w-[50px] items-center justify-center bg-primary-default"
           style={{ clipPath: "polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)" }}
         >
-          <Image src="/assets/icons/general/arrow.svg" width={24} height={24} />
+          <Image
+            src="/assets/icons/general/arrow.svg"
+            width={24}
+            height={24}
+            alt="Next"
+          />
         </motion.button>
       </div>
     </div>
