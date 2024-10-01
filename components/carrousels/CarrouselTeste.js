@@ -175,9 +175,9 @@ export default function Carousel1() {
   }, []);
 
   return (
-    <div className="image-shaddow relative mx-auto w-full" ref={carouselRef}>
+    <div className="relative mx-auto w-full" ref={carouselRef}>
       {isVisible && (
-        <div className=" mb-6 overflow-hidden">
+        <div className="image-shaddow mb-6 overflow-hidden">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={currentIndex}
