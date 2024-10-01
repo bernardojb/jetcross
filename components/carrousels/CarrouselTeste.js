@@ -190,8 +190,8 @@ export default function Carousel1() {
                 <Image
                   src={slides[currentIndex].image}
                   alt={`Slide ${currentIndex + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  layout="fill"
+                  //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
                   quality={100}
                   className="object-contain"
