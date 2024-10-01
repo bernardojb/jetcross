@@ -149,24 +149,24 @@ export default function Carousel1() {
     });
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 },
-    );
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     ([entry]) => {
+  //       setIsVisible(entry.isIntersecting);
+  //     },
+  //     { threshold: 0.1 },
+  //   );
 
-    if (carouselRef.current) {
-      observer.observe(carouselRef.current);
-    }
+  //   if (carouselRef.current) {
+  //     observer.observe(carouselRef.current);
+  //   }
 
-    return () => {
-      if (carouselRef.current) {
-        observer.unobserve(carouselRef.current);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (carouselRef.current) {
+  //       observer.unobserve(carouselRef.current);
+  //     }
+  //   };
+  // }, []);
 
   useEffect(() => {
     console.log(quality);
@@ -192,47 +192,45 @@ export default function Carousel1() {
 
   return (
     <div className="relative mx-auto w-full" ref={carouselRef}>
-      {isVisible && (
-        <div className="image-shaddow mb-6 overflow-hidden pt-14">
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            >
-              <div className="image-container relative mx-auto mb-3 mt-14 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
-                <Image
-                  src={slides[currentIndex].image}
-                  alt={`Slide ${currentIndex + 1}`}
-                  layout="fill"
-                  //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority
-                  quality={quality}
-                  className="object-contain"
-                />
-              </div>
-              <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
-                {slides[currentIndex].infos.map((i) => (
-                  <div key={i.id} className="mx-4 mb-5 w-full text-center">
-                    <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
-                      {i.title}
-                      <span className="text-[26px] lg:text-3xl">
-                        {" "}
-                        {i.complement}
-                      </span>
-                    </h2>
-                    <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
-                      {i.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
-      )}
+      <div className="image-shaddow mb-6 overflow-hidden pt-14">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <div className="image-container relative mx-auto mb-3 mt-14 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
+              <Image
+                src={slides[currentIndex].image}
+                alt={`Slide ${currentIndex + 1}`}
+                layout="fill"
+                //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+                quality={quality}
+                className="object-contain"
+              />
+            </div>
+            <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
+              {slides[currentIndex].infos.map((i) => (
+                <div key={i.id} className="mx-4 mb-5 w-full text-center">
+                  <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
+                    {i.title}
+                    <span className="text-[26px] lg:text-3xl">
+                      {" "}
+                      {i.complement}
+                    </span>
+                  </h2>
+                  <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
+                    {i.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
 
       <div className="absolute bottom-[-3rem] left-0 right-0 flex items-center justify-center space-x-4">
         <motion.button
