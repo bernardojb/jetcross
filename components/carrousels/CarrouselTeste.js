@@ -181,10 +181,10 @@ export default function Carousel1() {
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              //   initial={{ opacity: 0 }}
+              //   animate={{ opacity: 1 }}
+              //   exit={{ opacity: 0 }}
+              //   transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <div className="image-container relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
                 <Image
