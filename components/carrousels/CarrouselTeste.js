@@ -186,7 +186,7 @@ export default function Carousel1() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              <div className="image-container relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
+              <div className="image-container relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] pt-14 md:h-[350px] lg:h-[500px]">
                 <Image
                   src={slides[currentIndex].image}
                   alt={`Slide ${currentIndex + 1}`}
