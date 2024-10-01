@@ -24,7 +24,7 @@ const Teste = () => {
             width={630}
             className="mb-3"
           />
-          <p className="mb-14 text-center font-secondary text-lg text-typo-secondary">
+          <p className="text-center font-secondary text-lg text-typo-secondary">
             O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.
           </p>
         </div>
