@@ -8,10 +8,10 @@ const Teste = () => {
   return (
     <div className="flex h-screen w-full items-center justify-center">
       <section
-        className="w-full bg-carrouselGradient px-4 pb-20 pt-[160px]"
+        className="w-full bg-carrouselGradient pb-20 pt-[160px]"
         id="produtos"
       >
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center px-4">
           <Image
             src="/assets/icons/general/jetcross-type-logo.svg"
             height={20}
@@ -31,7 +31,7 @@ const Teste = () => {
 
         <CarrouselTeste />
 
-        <div className="flex flex-row items-center justify-center pt-24">
+        <div className="flex flex-row items-center justify-center px-4 pt-24">
           <div
             class={`mr-4 flex h-10 w-[50px] shrink-0 items-center justify-center bg-primary-default`}
             style={{
