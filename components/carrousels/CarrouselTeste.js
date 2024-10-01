@@ -178,43 +178,43 @@ export default function Carousel1() {
     <div className="relative mx-auto w-full" ref={carouselRef}>
       {isVisible && (
         <div className="image-shaddow mb-6 overflow-hidden">
-          {/* <AnimatePresence mode="wait" initial={false}> */}
-          <div
-            key={currentIndex}
-            //   initial={{ opacity: 0 }}
-            //   animate={{ opacity: 1 }}
-            //   exit={{ opacity: 0 }}
-            //   transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <div className="image-container relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
-              <Image
-                src={slides[currentIndex].image}
-                alt={`Slide ${currentIndex + 1}`}
-                fill
-                //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                priority
-                quality={100}
-                className="object-contain"
-              />
-            </div>
-            <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
-              {slides[currentIndex].infos.map((i) => (
-                <div key={i.id} className="mx-4 mb-5 w-full text-center">
-                  <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
-                    {i.title}
-                    <span className="text-[26px] lg:text-3xl">
-                      {" "}
-                      {i.complement}
-                    </span>
-                  </h2>
-                  <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
-                    {i.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* </AnimatePresence> */}
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <div className="image-container relative mx-auto mb-3 h-[300px] w-full max-w-[1428px] md:h-[350px] lg:h-[500px]">
+                <Image
+                  src={slides[currentIndex].image}
+                  alt={`Slide ${currentIndex + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  quality={100}
+                  className="object-contain"
+                />
+              </div>
+              <div className="mx-auto flex max-w-[1428px] flex-col items-center justify-center lg:flex-row">
+                {slides[currentIndex].infos.map((i) => (
+                  <div key={i.id} className="mx-4 mb-5 w-full text-center">
+                    <h2 className="font-primary text-[26px] uppercase text-typo-primary lg:text-5xl">
+                      {i.title}
+                      <span className="text-[26px] lg:text-3xl">
+                        {" "}
+                        {i.complement}
+                      </span>
+                    </h2>
+                    <p className="text-center font-secondary text-xs text-typo-secondary lg:text-base">
+                      {i.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       )}
 

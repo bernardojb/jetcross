@@ -147,10 +147,10 @@ const Home = () => {
             </p>
           </div>
 
-          {/* <Carrousel1 /> */}
+          <Carrousel1 />
 
           {/* <Carrousel2 /> */}
-          <CarrouselTeste />
+          {/* <CarrouselTeste /> */}
 
           <div className="flex flex-row items-center justify-center pt-24">
             <div
