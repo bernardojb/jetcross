@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -120,6 +119,7 @@ export default function Carousel1() {
   const [canNavigate, setCanNavigate] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const carouselRef = useRef(null);
+  const [quality, setQuality] = useState(100);
 
   const navigate = useCallback(
     (direction) => {
@@ -168,6 +168,22 @@ export default function Carousel1() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log(quality);
+
+    const updateQuality = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+        setQuality(100);
+      } else {
+        setQuality(75);
+      }
+    };
+
+    updateQuality();
+    window.addEventListener("resize", updateQuality);
+    return () => window.removeEventListener("resize", updateQuality);
+  }, []);
+
   const setCurrentIndexCallback = useCallback((index) => {
     setCurrentIndex(index);
     setCanNavigate(false);
@@ -193,7 +209,7 @@ export default function Carousel1() {
                   layout="fill"
                   //   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
-                  quality={100}
+                  quality={quality}
                   className="object-contain"
                 />
               </div>

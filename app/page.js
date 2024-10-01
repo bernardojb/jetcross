@@ -122,14 +122,10 @@ const Home = () => {
         />
 
         <section
-          className="bg-carrouselGradient px-4 pb-20 pt-[160px]"
+          className="w-full bg-carrouselGradient pb-20 pt-[160px]"
           id="produtos"
         >
-          {/* <section
-          className="flex flex-col items-center justify-center bg-carrouselGradient px-4 pb-20 pt-[160px]"
-          id="produtos"
-        ></section> */}
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center px-4">
             <Image
               src="/assets/icons/general/jetcross-type-logo.svg"
               height={20}
@@ -142,17 +138,14 @@ const Home = () => {
               width={630}
               className="mb-3"
             />
-            <p className="mb-14 text-center font-secondary text-lg text-typo-secondary">
+            <p className="text-center font-secondary text-lg text-typo-secondary">
               O equilíbrio perfeito entre um design espaçoso e ótimo desempenho.
             </p>
           </div>
 
-          <Carrousel1 />
+          <CarrouselTeste />
 
-          {/* <Carrousel2 /> */}
-          {/* <CarrouselTeste /> */}
-
-          <div className="flex flex-row items-center justify-center pt-24">
+          <div className="flex flex-row items-center justify-center px-4 pt-24">
             <div
               class={`mr-4 flex h-10 w-[50px] shrink-0 items-center justify-center bg-primary-default`}
               style={{
@@ -169,7 +162,6 @@ const Home = () => {
             <p className="font-secondary text-lg text-typo-secondary">
               <a
                 target="_blank"
-                // href="/assets/main/FichaTécnica-AquaSeeker.pdf"
                 className="cursor-pointer text-primary-default underline transition duration-300 ease-out hover:text-typo-primary hover:transition hover:duration-200 hover:ease-out"
                 onClick={() => setModal(true)}
               >
@@ -178,8 +170,6 @@ const Home = () => {
             </p>
           </div>
         </section>
-
-        {/* <section className="teste h-28 bg-red-500"></section> */}
 
         <motion.section className="flex justify-center bg-[#11190C] px-10 py-7">
           <motion.div initial="initial" whileHover="hover">
